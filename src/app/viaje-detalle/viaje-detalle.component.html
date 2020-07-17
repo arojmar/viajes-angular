@@ -1,0 +1,45 @@
+<div class="container">
+    
+    <div class="card">
+        <ul>
+            <li>
+                <div class="icon">
+                    <fa-icon 
+                     icon = {{selectIconStatus(viaje.estado)}}></fa-icon> 
+                </div>
+            </li>
+            <li>
+                <div [appHighlight]="'red'">
+                    <h3>{{viaje.nombreDelViaje}}</h3>
+                </div>
+            </li>
+            <li>
+                <input type="text" [appSelectable]="opciones" (selectableChanged)="textChanged($event)">
+            </li>
+            <app-viaje-linea-detalle
+                [appHighlight] = "'green'"
+                [title] = "'Tipo de viaje'"
+                [value] = "viaje.tipoDeViaje">
+            </app-viaje-linea-detalle>
+            <app-viaje-linea-detalle 
+                appHighlight
+                [color] = "'grey'"
+                [title] = "'Destino'"
+                [value] = "viaje.destinoViaje">
+            </app-viaje-linea-detalle>
+            <app-viaje-linea-detalle
+                appHighlight 
+                [color] = "'grey'"
+                [title] = "'Duracion'"
+                [value] = "viaje.duracionViaje">
+            </app-viaje-linea-detalle>
+            <app-viaje-linea-detalle
+                [appStatus] = "viaje.estado"
+                [title] = "'Estado'"
+                [value] = "viajeEstado[viaje.estado]">
+            </app-viaje-linea-detalle>
+        </ul>
+        <button class="boton1" (click)="mostrarViaje.emit(viaje.nombreDelViaje)">Mostrar info</button>
+        <button class="boton2" (click)="showTrips()">Show Trip</button>
+    </div>
+</div>

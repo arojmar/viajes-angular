@@ -1,0 +1,57 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+    
+    .card {
+        padding: 1rem;
+        margin: 1rem;
+        width: 250px;
+        background-color: rgb(204, 197, 197);
+        border: 1px solid rgb(219, 217, 217);
+        border-radius: 0.8rem;
+        box-shadow: 2px 3px 3px dimgrey;
+    
+        ul {
+            list-style: none;
+            padding: 0;
+
+            li {
+                .icon {
+                    text-align: center;
+                    font-weight: 600;
+                    font-size: 20px;
+                }
+                h3 {
+                    padding: 0;
+                    text-align: center;
+                }
+            }
+            
+        }
+
+        .boton1 {
+            border-radius: 0.5rem;
+            border: 1px solid rgba(130, 241, 130, 0.63);
+            width: 100%;
+            background-color: rgba(130, 241, 130, 0.63);
+        }
+
+        .boton1:hover{
+            background-color: rgba(79, 158, 79, 0.63);
+            
+        }
+        .boton2 {
+            border-radius: 0.5rem;
+            border: 1px solid rgba(212, 238, 120, 0.63);
+            width: 100%;
+            background-color: rgba(202, 240, 113, 0.63);
+        }
+
+        .boton2:hover{
+            background-color: rgba(137, 145, 26, 0.63);
+            
+        }
+    }
+}
